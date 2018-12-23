@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css'
+import SnowStorm from 'react-snowstorm';
 
 const backendURL = "http://localhost:8080"
 class App extends Component {
@@ -26,6 +27,9 @@ class App extends Component {
     if(this.state.hasAnswered) {
       return (
         <div className="App container">
+          <div className="identify-snow">
+            <SnowStorm excludeMobile={false} />
+          </div>
           <div className="row">
             <div className="col-md-4 offset-md-4 mt-5">
               <header className="App-header">
@@ -50,6 +54,9 @@ class App extends Component {
     }
     return (
       <div className="App container">
+        <div className="identify-snow">
+            <SnowStorm excludeMobile={false}/>
+        </div>
         <div className="row">
           <div className="col-md-4 offset-md-4 mt-5">
             <header className="App-header">
